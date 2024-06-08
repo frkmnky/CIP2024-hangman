@@ -10,7 +10,7 @@ def print_word_hidden(answer_letters):
     return answer_hidden
 
 #set max number of guesses for the game
-GUESSES = 6
+GUESSES = 7
 
 #get word list from text document and assign to list variable
 word_list = open("secondgradewordlist.txt", "r").read().split()
