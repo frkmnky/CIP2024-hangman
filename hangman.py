@@ -12,6 +12,72 @@ def print_word_hidden(answer_letters):
 #set max number of guesses for the game
 GUESSES = 7
 
+#ASCII art for hangman
+hangman = ['''
+      _______
+     |/      |
+     |      (_)
+     |     --|--
+     |       |
+     |      | |
+     |
+    _|___
+    ''', '''
+      _______
+     |/      |
+     |      (_)
+     |     --|--
+     |       |
+     |      | 
+     |
+    _|___
+    ''', '''
+      _______
+     |/      |
+     |      (_)
+     |     --|--
+     |       |
+     |       
+     |
+    _|___
+    ''', '''
+      _______
+     |/      |
+     |      (_)
+     |     --|
+     |       |
+     |       
+     |
+    _|___
+    ''', '''
+      _______
+     |/      |
+     |      (_)
+     |       |
+     |       |
+     |       
+     |
+    _|___
+    ''','''
+      _______
+     |/      |
+     |      (_)
+     |       
+     |       
+     |       
+     |
+    _|___
+    ''','''
+      _______
+     |/      |
+     |      
+     |       
+     |       
+     |       
+     |
+    _|___
+    ''']
+
 #get word list from text document and assign to list variable
 word_list = open("secondgradewordlist.txt", "r").read().split()
 
@@ -59,6 +125,7 @@ print("Hint: The word is", len(answer), "letters long.")
 #Start the game!
 for i in range(GUESSES):
     print()
+    print(hangman[GUESSES - 1])
     print(answer_hidden)
     #ask for user guess and make sure it is lower case
     letter_guess = input("Guess a letter: ")
